@@ -15,6 +15,8 @@ Node::Node(char to_add[])
 bool Node::
 is_match(char to_check[])
 {
+  using::strcmp;
+
   if(strcmp(to_check, elm) != 0)
     return false;
   return true;
