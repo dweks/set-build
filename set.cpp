@@ -52,8 +52,10 @@ Set::Set()
 
 Set::~Set()
 {
-  destroy_elems();
-  set_vx = {};
+  if(!set_vx.empty()) {
+    destroy_elems();
+    set_vx = {};
+  }   
   for(int i = 0; i < ELMMAX; ++i)
     destroy_nodes(tally[i]);
 }
